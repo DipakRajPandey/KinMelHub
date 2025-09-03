@@ -1,0 +1,26 @@
+.product a {
+  text-decoration: none;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+}
+.product {
+  display: flex;
+  flex-direction: column; /* Stack content inside each product vertically */
+  width: 200px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.image {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  margin-bottom: 10px;
+}

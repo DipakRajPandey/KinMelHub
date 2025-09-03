@@ -1,0 +1,202 @@
+.popup-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 400px;
+  max-width: 90%;
+  position: relative;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  max-height: 90vh;
+  overflow-y: auto;
+}
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  font-weight: 700;
+  cursor: pointer;
+  color: #333;
+  line-height: 1;
+}
+
+/* Form inside popup */
+.popup-content form label {
+  font-weight: 600;
+  margin-top: 10px;
+  display: block;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.popup-content form input[type="text"],
+.popup-content form input[type="email"],
+.popup-content form input[type="password"],
+.popup-content form input[type="tel"],
+.popup-content form input[type="file"],
+.popup-content form select {
+  width: 100%;
+  padding: 8px 12px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.popup-content form input[type="file"] {
+  padding: 3px 6px;
+}
+
+.popup-content form button.btn-primary {
+  margin-top: 15px;
+  width: 100%;
+  padding: 10px 0;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+}
+/* Dropdown menu */
+.dropdown-menu {
+  background-color: white;
+  border-radius: 6px;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  min-width: 200px;
+  padding: 1rem;
+  z-index: 1050;
+}
+
+.dropdown-menu p {
+  margin: 0.25rem 0;
+  font-size: 0.9rem;
+  color: #212529;
+}
+
+.dropdown-menu img {
+  display: block;
+  margin: 0 auto 0.75rem auto;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+
+.navbar {
+  padding: 0.5rem 1rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.navbar-brand img {
+  margin-right: 10px;
+  border-radius: 6px;
+}
+
+.nav-link {
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  color: inherit;
+  transition: color 0.2s ease-in-out;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #0d6efd; /* Bootstrap primary */
+}
+
+.btn {
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-light {
+  background-color: #f8f9fa;
+  color: #212529;
+  border: 1px solid #ced4da;
+}
+
+.btn-light:hover {
+  background-color: #e2e6ea;
+}
+
+.btn-primary {
+  background-color: #0d6efd;
+  color: white;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #0b5ed7;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+}
+
+.btn-danger:hover {
+  background-color: #bb2d3b;
+}
+/*  search button  */
+.custom-search-input {
+  height: 40px;
+  font-size: 16px;
+  border-radius: 25px 0 0 25px;
+  border: 1px solid #ced4da;
+  border-right: none;
+  padding-left: 20px;
+  outline: none;
+  box-shadow: none !important;
+  transition: border-color 0.3s ease;
+}
+
+.custom-search-input:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 5px #0d6efd;
+}
+
+.custom-search-button {
+  height: 40px;
+  border-radius: 0 25px 25px 0;
+  font-size: 16px;
+  padding: 0 25px;
+  border: 1px solid #0d6efd;
+  border-left: none;
+  background-color: #0d6efd;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.custom-search-button:hover {
+  background-color: #0b5ed7;
+  border-color: #0b5ed7;
+}
+
+.custom-search-button:hover {
+  background-color: #0b5ed7;
+  border-color: #0b5ed7;
+}

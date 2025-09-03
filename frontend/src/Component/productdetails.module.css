@@ -1,0 +1,202 @@
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.productWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.imageContainer {
+  flex: 1 1 300px;
+  text-align: center;
+}
+
+.imageContainer img {
+  border-radius: 10px;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.detailsContainer {
+  flex: 1 1 550px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.detailsContainer h2 {
+  margin-bottom: 10px;
+}
+
+.detailsContainer p {
+  margin: 6px 0;
+  font-size: 16px;
+  color: #444;
+}
+
+.quantityInput {
+  width: 70px;
+  padding: 6px 10px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+.buttonGroup {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 10px 18px;
+  font-size: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.btn-success {
+  background-color: #28a745;
+  color: white;
+}
+
+.btn-success:hover {
+  background-color: #1e7e34;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: #565e64;
+}
+
+.orderForm {
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background: #f9f9f9;
+  max-width: 450px;
+}
+
+.orderForm h4 {
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.orderForm label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.orderForm input {
+  width: 100%;
+  padding: 8px 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.reviewsSection {
+  margin-top: 40px;
+}
+
+.reviewCard {
+  border-bottom: 1px solid #ddd;
+  padding: 15px 0;
+}
+
+.reviewCard p {
+  margin: 3px 0;
+}
+
+.reviewCard .fw-bold {
+  font-weight: 700;
+}
+
+.textSuccess {
+  color: #28a745;
+  font-weight: 600;
+}
+
+.textDanger {
+  color: #dc3545;
+  font-weight: 600;
+}
+
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.pagination button {
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pagination button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.pagination button:not(:disabled):hover {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.vendorCard {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.vendorCard img {
+  max-width: 100px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.vendorCard p {
+  margin: 5px 0;
+  font-size: 15px;
+  color: #444;
+}
+h2 {
+  text-align: center;
+}
