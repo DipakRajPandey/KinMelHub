@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -13,12 +14,11 @@ import dipak.kinmelhub.exception.DublicateResourceException;
 import dipak.kinmelhub.exception.ResourceNotFoundException;
 import dipak.kinmelhub.model.Products;
 import dipak.kinmelhub.model.Users;
-import dipak.kinmelhub.model.Vendors;
 import dipak.kinmelhub.model.Users.Role;
 import dipak.kinmelhub.model.Users.Status;
+import dipak.kinmelhub.model.Vendors;
 import dipak.kinmelhub.repository.CartItemRepository;
 import dipak.kinmelhub.repository.OrderItemRepository;
-import dipak.kinmelhub.repository.OrderRepository;
 import dipak.kinmelhub.repository.ProductRepository;
 import dipak.kinmelhub.repository.ReviewRepository;
 import dipak.kinmelhub.repository.UserRepository;
@@ -43,6 +43,8 @@ private ReviewRepository reviewRepo;
 private CartItemRepository cartitemRepo;
 @Autowired
 private UsersService userService;
+	@Autowired
+	private BCryptPasswordEncoder passwordEncoder;
 
 private String uploadFile(MultipartFile file) {
 	if (file != null && !file.isEmpty()) {
@@ -65,8 +67,9 @@ private String uploadFile(MultipartFile file) {
 		    throw new IllegalArgumentException("Store name must not be null or empty");
 	 }
 	 Users u=new Users();
+	 
 	 u.setEmail(vendor.getEmail());
-	 u.setPassword(vendor.getPassword());//password encoder add later
+	 u.setPassword(passwordEncoder.encode(vendor.getPassword()));//password encoder add later
 	 u.setName(vendor.getName());
 	 u.setProfile(uploadFile(profile));
 	 u.setRole(Role.VENDOR);
