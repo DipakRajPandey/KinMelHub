@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
-import logo from "../assets/images/Logo.jpeg";
+import logo from "../assets/Images/kinmel.jpeg";
 import "./popupform.css";
 export default function AdminNavBar() {
   const [darkMode, setDarkMode] = useState(false);
