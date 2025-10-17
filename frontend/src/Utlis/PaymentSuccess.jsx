@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
-import tick from "../../public/Images/ticksign.png";
+import tick from "../assets/Images/ticksign.png";
 import Footer from "../Component/Footer";
 import UserNvaBar from "../Component/UserNvaBar";
 import style from "./paymentsuccess.module.css";
