@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
-import logo from "../assets/images/logo.jpeg";
+import logo from "../../public/Images/kinmel.jpeg";
 import "./popupform.css";
 {
   /* <img src={logo} alt="Logo" style={{ height: "40px" }} />; */
