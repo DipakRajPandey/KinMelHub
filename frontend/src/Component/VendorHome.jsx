@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import EditProductModal from "./EditProductModal";
 import VenderNavBar from "./VenderNavBar";
-import styles from "./vendorHome.module.css?used";
+import styles from "./VendorHome.module.css?used";
 
 export default function VendorHome() {
   const [editingProduct, setEditingProduct] = useState(null);
