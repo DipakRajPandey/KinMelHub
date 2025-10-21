@@ -10,7 +10,6 @@ import java.util.stream.Collectors;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,7 +19,7 @@ import dipak.kinmelhub.model.KhaltiRequest;
 
 @RestController
 @RequestMapping("/api/khalti")
-@CrossOrigin(origins = "http://localhost:5173")
+// @CrossOrigin(origins = "http://localhost:5173")
 public class KhaltiController {
 
 //	    private final String khaltiSecretKey = "test_secret_key_07ef4e309c394dcbb8c2e556d3e843e8";

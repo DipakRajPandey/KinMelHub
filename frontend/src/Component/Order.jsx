@@ -14,7 +14,7 @@ export default function () {
 
     if (userId) {
       axios
-        .get(`http://localhost:9090/getorderbyuserid/${userId}`)
+        .get(`${import.meta.env.VITE_API_BASE_URL}/getorderbyuserid/${userId}`)
         .then((res) => {
           setOrders(res.data);
           console.log(res.data);
@@ -37,7 +37,7 @@ export default function () {
   //deleting orders
   const deleteIteam = (id) => {
     axios
-      .delete(`http://localhost:9090/deleteorder/${id}`)
+      .delete(`${import.meta.env.VITE_API_BASE_URL}/deleteorder/${id}`)
       .then(() => {
         alert("Item deleted from Order List");
         window.location.reload();

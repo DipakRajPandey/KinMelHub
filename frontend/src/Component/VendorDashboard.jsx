@@ -14,7 +14,7 @@ const VendorDashboard = ({ vendorId }) => {
       console.log("Vendor ID:", vendorId);
       try {
         const res = await axios.get(
-          `http://localhost:9090/getdata/${vendorId}`
+          `${import.meta.env.VITE_API_BASE_URL}/getdata/${vendorId}`
         );
         setDashboardData(res.data);
       } catch (error) {

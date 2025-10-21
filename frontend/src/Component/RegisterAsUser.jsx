@@ -36,10 +36,13 @@ export default function RegisterAsUser() {
     formDataToSend.append("image", formData.profile); // formData.image is a File
 
     try {
-      const response = await fetch("http://localhost:9090/register", {
-        method: "POST",
-        body: formDataToSend,
-      });
+      const response = await fetch(
+        `${import.meta.env.VITE_API_BASE_URL}register`,
+        {
+          method: "POST",
+          body: formDataToSend,
+        }
+      );
 
       if (response.ok) {
         alert("Registered with image successfully");

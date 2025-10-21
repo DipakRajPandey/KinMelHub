@@ -46,10 +46,13 @@ export default function RegisterAsVendor() {
     formDataToSend.append("logo", formData.logo);
 
     try {
-      const res = await fetch("http://localhost:9090/vendor/register", {
-        method: "POST",
-        body: formDataToSend,
-      });
+      const res = await fetch(
+        `${import.meta.env.VITE_API_BASE_URL}/vendor/register`,
+        {
+          method: "POST",
+          body: formDataToSend,
+        }
+      );
 
       if (res.ok) {
         alert("Vendor registered successfully!");

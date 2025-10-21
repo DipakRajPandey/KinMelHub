@@ -13,7 +13,7 @@ export default function ProductDetails() {
   const navigator = useNavigate();
   useEffect(() => {
     axios
-      .get(`http://localhost:9090/getproductbyid/${id}`)
+      .get(`${import.meta.env.VITE_API_BASE_URL}/getproductbyid/${id}`)
       .then((res) => {
         console.log(res.data);
         setProduct(res.data);
@@ -46,7 +46,7 @@ export default function ProductDetails() {
     };
 
     axios
-      .post(`http://localhost:9090/addorder/${userId}`, order)
+      .post(`${import.meta.env.VITE_API_BASE_URL}/addorder/${userId}`, order)
       .then((res) => {
         alert("Order placed successfully!");
         setShowOrderForm(false);
@@ -77,7 +77,7 @@ export default function ProductDetails() {
       ],
     };
     axios
-      .post(`http://localhost:9090/addcart/${userId}`, cart)
+      .post(`${import.meta.env.VITE_API_BASE_URL}/addcart/${userId}`, cart)
       .then((res) => {
         alert("Item added to cart successfully!");
         setQuantity(1); // Reset quantity after adding to cart
@@ -95,7 +95,9 @@ export default function ProductDetails() {
 
   const fetchReviews = async (pageNumber = 0) => {
     const res = await axios.get(
-      `http://localhost:9090/getreviewbyproductid/${id}?page=${pageNumber}&size=5`
+      `${
+        import.meta.env.VITE_API_BASE_URL
+      }/getreviewbyproductid/${id}?page=${pageNumber}&size=5`
     );
     try {
       setReviews(res.data.content);

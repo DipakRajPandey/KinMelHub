@@ -11,7 +11,7 @@ export default function AdminOrder() {
 
     if (userId) {
       axios
-        .get(`http://localhost:9090/getallorders`)
+        .get(`${import.meta.env.VITE_API_BASE_URL}/getallorders`)
         .then((res) => {
           setOrders(res.data);
           console.log(res.data);

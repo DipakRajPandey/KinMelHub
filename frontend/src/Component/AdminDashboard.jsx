@@ -11,7 +11,9 @@ export default function AdminDashboard() {
       console.log("User data:", user);
 
       try {
-        const res = await axios.get(`http://localhost:9090/admindata`);
+        const res = await axios.get(
+          `${import.meta.env.VITE_API_BASE_URL}/admindata`
+        );
         setDashboardData(res.data);
       } catch (error) {
         console.error("Error fetching Admin dashboard:", error);

@@ -18,7 +18,7 @@ export default function AdminUser() {
     console.log("User data:", user);
     if (userId) {
       axios
-        .get(`http://localhost:9090/alluser`)
+        .get(`${import.meta.env.VITE_API_BASE_URL}/alluser`)
         .then((res) => {
           setOrders(res.data);
           console.log(res.data);
@@ -49,7 +49,7 @@ export default function AdminUser() {
 
     try {
       const res = await axios.put(
-        `http://localhost:9090/update/${selectedUserId}`,
+        `${import.meta.env.VITE_API_BASE_URL}/update/${selectedUserId}`,
         formDataToSend,
         {
           headers: {

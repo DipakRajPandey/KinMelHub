@@ -35,7 +35,9 @@ export default function VenderNavBar() {
     const vendorId = user?.user?.vendor?.id;
     axios
       .get(
-        `http://localhost:9090/getproductforvendor/${vendorId}/${searchQuery}`
+        `${
+          import.meta.env.VITE_API_BASE_URL
+        }/getproductforvendor/${vendorId}/${searchQuery}`
       )
       .then((res) => {
         if (res.data.length === 0) {
@@ -107,7 +109,7 @@ export default function VenderNavBar() {
     console.log(formDataToSend.get("vendor"));
     try {
       const res = await fetch(
-        `http://localhost:9090/vendor/updatevendor/${vendorId}`,
+        `${import.meta.env.VITE_API_BASE_URL}/vendor/updatevendor/${vendorId}`,
         {
           method: "PUT",
           body: formDataToSend,

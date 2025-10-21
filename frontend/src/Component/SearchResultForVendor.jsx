@@ -11,7 +11,7 @@ export default function SearchResult() {
   // deleteing product
   const deleteProduct = (id) => {
     axios
-      .delete(`http://localhost:9090/deleteproduct/${id}`)
+      .delete(`${import.meta.env.VITE_API_BASE_URL}/deleteproduct/${id}`)
       .then((res) => {
         console.log(res.data);
         setProducts(products.filter((item) => item.id !== id));

@@ -23,7 +23,7 @@ export default function EditProductModal({ product, onClose, onSuccess }) {
 
     try {
       await axios.put(
-        `http://localhost:9090/updateproduct/${product.id}`,
+        `${import.meta.env.VITE_API_BASE_URL}/updateproduct/${product.id}`,
         data,
         {
           headers: { "Content-Type": "multipart/form-data" },

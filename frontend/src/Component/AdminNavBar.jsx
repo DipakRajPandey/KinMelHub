@@ -63,7 +63,7 @@ export default function AdminNavBar() {
     formDataToSend.append("image", formData.profile); // formData.image is a File
     try {
       const res = await axios.put(
-        `http://localhost:9090/update/${user.user.id}`,
+        `${import.meta.env.VITE_API_BASE_URL}/update/${user.user.id}`,
         formDataToSend,
         {
           headers: {
@@ -165,7 +165,7 @@ export default function AdminNavBar() {
             alt="Logo"
             style={{ height: "40px", marginRight: "10px" }}
           />
-          KinmelHub
+          KinmelHub{logo}
         </NavLink>
 
         <button

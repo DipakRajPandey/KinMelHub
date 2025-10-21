@@ -12,7 +12,7 @@ export default function OrderReceived() {
 
     if (vendorId) {
       axios
-        .get(`http://localhost:9090/totalorder/${vendorId}`)
+        .get(`${import.meta.env.VITE_API_BASE_URL}/${vendorId}`)
         .then((res) => {
           setOrders(res.data);
           console.log(res.data);
@@ -32,7 +32,7 @@ export default function OrderReceived() {
     };
 
     axios
-      .put(`http://localhost:9090/updateorder/${orderId}`, body)
+      .put(`${import.meta.env.VITE_API_BASE_URL}/updateorder/${orderId}`, body)
       .then((res) => {
         alert("Order updated successfully");
         setStatusUpdates((prev) => ({

@@ -5,9 +5,7 @@ import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -24,13 +22,11 @@ import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import dipak.kinmelhub.dto.LoginRequest;
-import dipak.kinmelhub.dto.LoginResponse;
 import dipak.kinmelhub.dto.UserDTO;
 import dipak.kinmelhub.model.Users;
 import dipak.kinmelhub.service.UsersService;
 import io.swagger.v3.oas.annotations.tags.Tag;
-import jakarta.validation.Valid;
-@CrossOrigin(origins = "http://localhost:5173")
+// @CrossOrigin(origins = "http://localhost:5173")
 @Tag(name="User apis")
 
 @RestController

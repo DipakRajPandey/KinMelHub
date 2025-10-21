@@ -7,7 +7,7 @@ export default function Index() {
   const [products, setProducts] = useState([]);
   useEffect(() => {
     axios
-      .get("http://localhost:9090/allproduct")
+      .get(`${import.meta.env.VITE_API_BASE_URL}/allproduct`)
       .then((res) => {
         setProducts(res.data);
         console.log(res.data);

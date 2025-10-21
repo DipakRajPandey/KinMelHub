@@ -12,7 +12,7 @@ export default function KhaltiPayment() {
         console.log(payload);
         // Send token to backend for verification
         axios
-          .post("http://localhost:9090/api/khalti/verify", {
+          .post(`${import.meta.env.VITE_API_BASE_URL}/api/khalti/verify`, {
             token: payload.token,
             amount: payload.amount,
           })

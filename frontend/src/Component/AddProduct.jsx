@@ -29,9 +29,13 @@ export default function AddProduct({ onClose, onSuccess }) {
     if (image) data.append("image", image);
 
     try {
-      await axios.post(`http://localhost:9090/addproduct/${vendorId}`, data, {
-        headers: { "Content-Type": "multipart/form-data" },
-      });
+      await axios.post(
+        `${import.meta.env.VITE_API_BASE_URL}/${vendorId}`,
+        data,
+        {
+          headers: { "Content-Type": "multipart/form-data" },
+        }
+      );
       alert("Product added successfully!");
       setFormData({
         name: "",

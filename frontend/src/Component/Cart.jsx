@@ -15,7 +15,11 @@ export default function Cart() {
     console.log(userId);
     if (userId) {
       axios
-        .get(`http://localhost:9090/getallcartitembyuserid/${userId}`)
+        .get(
+          `${
+            import.meta.env.VITE_API_BASE_URL
+          }/getallcartitembyuserid/${userId}`
+        )
         .then((res) => {
           setCarts(res.data);
           console.log(res.data);
@@ -42,7 +46,7 @@ export default function Cart() {
     };
     console.log("iteam id ", item.id);
     axios
-      .put(`http://localhost:9090/updatecart/${item.id}`, body)
+      .put(`${import.meta.env.VITE_API_BASE_URL}/${item.id}`, body)
       .then(() => {
         alert("Quantity updated successfully");
         window.location.reload();
@@ -55,7 +59,7 @@ export default function Cart() {
   //delete items form th  cart
   const deleteIteam = (id) => {
     axios
-      .delete(`http://localhost:9090/deletecart/${id}`)
+      .delete(`${import.meta.env.VITE_API_BASE_URL}/deletecart/${id}`)
       .then(() => {
         alert("Item deleted from cart");
         window.location.reload();
@@ -89,7 +93,7 @@ export default function Cart() {
     };
 
     axios
-      .post(`http://localhost:9090/addorder/${userId}`, order)
+      .post(`${import.meta.env.VITE_API_BASE_URL}/addorder/${userId}`, order)
       .then((res) => {
         alert("Order placed successfully!");
         const tomail = "dipakrajpandey31@gmail.com";
@@ -100,7 +104,9 @@ export default function Cart() {
         };
         axios
           .post(
-            `http://localhost:9090/sendmail/${tomail}/${subject}`,
+            `${
+              import.meta.env.VITE_API_BASE_URL
+            }/sendmail/${tomail}/${subject}`,
             emailbody
           )
           .then((res) => {

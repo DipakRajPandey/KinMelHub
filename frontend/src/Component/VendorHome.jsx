@@ -15,7 +15,11 @@ export default function VendorHome() {
       const storename = user.user.vendor.storename;
       console.log("Store Name:", storename);
       axios
-        .get(`http://localhost:9090/getproductbystorename/${storename}`)
+        .get(
+          `${
+            import.meta.env.VITE_API_BASE_URL
+          }/getproductbystorename/${storename}`
+        )
         .then((res) => {
           setProducts(res.data);
           console.log(res.data);
@@ -30,7 +34,7 @@ export default function VendorHome() {
   // deleteing product
   const deleteProduct = (id) => {
     axios
-      .delete(`http://localhost:9090/deleteproduct/${id}`)
+      .delete(`${import.meta.env.VITE_API_BASE_URL}/deleteproduct/${id}`)
       .then((res) => {
         console.log(res.data);
         setProducts(products.filter((item) => item.id !== id));
